@@ -56,7 +56,7 @@ class log{
 
         $result = json_decode( $req->body, true );
 
-        return $req->status_code == 200 && isset( $result['result'] ) && $result['result'] == 'ok';
+        return $req->status_code == 200 && isset( $result['response'] ) && $result['response'] == 'ok';
     }
 
 }
