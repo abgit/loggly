@@ -1,0 +1,13 @@
+{
+	"name": "abgit/loggly",
+	"description": "A simple php loggly sdk to send events",
+    "require": {
+        "ext-json": "*",
+        "rmccue/requests": "1.*"
+	},
+	"autoload": {
+        "psr-4": {
+            "loggly\\": "src/"
+        }
+    }
+}
