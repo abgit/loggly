@@ -18,7 +18,9 @@ class log{
         if( is_array( $message ) ){
 
             // add timestamp
-            $message[ 'timestamp' ] = date( sprintf( 'Y-m-d\TH:i:s%s\Z', substr( microtime(), 1, 7 ) ) );
+            if( !isset( $message[ 'timestamp' ] ) ) {
+                $message['timestamp'] = date(sprintf('Y-m-d\TH:i:s%s\Z', substr(microtime(), 1, 7)));
+            }
 
             return json_encode( $message );
         }
